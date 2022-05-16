@@ -7,6 +7,6 @@ public class PrintFormatacaoNumeros {
         float valor = 7654.321f;
         NumberFormat numeroFormatado = NumberFormat.getInstance(new Locale("en", "US"));
         String val = "Valor: R$ " + numeroFormatado.format(valor);
-        System.out.printf("%s%n%s%.2f%%%n",val, "Taxa: ", taxa);
+        System.out.printf("%s%n%s%.2f%%%n",val.substring(0, 18), "Taxa: ", taxa);
     }
 }
