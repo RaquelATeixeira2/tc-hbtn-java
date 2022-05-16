@@ -5,8 +5,6 @@ public class PrintFormatacaoNumeros {
         float taxa = 0.2456f;
         float valor = 7654.321f;
         String valorFormatado = "Valor: " + NumberFormat.getCurrencyInstance().format(valor);
-        String porcentagemFormatado = "Taxa: " + NumberFormat.getPercentInstance().format(taxa);
-        System.out.println(valorFormatado);
-        System.out.println(porcentagemFormatado);
+        System.out.printf("%s%n%s%.2f%%%n",valorFormatado, "Taxa: ", taxa);
     }
 }
