@@ -1,10 +1,12 @@
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class PrintFormatacaoNumeros {
     public static void main(String[] args) {
         float taxa = 0.2456f;
         float valor = 7654.321f;
-        String valorFormatado = "Valor: " + NumberFormat.getCurrencyInstance().format(valor);
-        System.out.printf("%s%n%s%.2f%%%n",valorFormatado, "Taxa: ", taxa);
+        NumberFormat numeroFormatado = NumberFormat.getInstance(new Locale("en", "US"));
+        String val = "Valor: " + numeroFormatado.format(valor);
+        System.out.printf("%s%n%s%.2f%%%n",val, "Taxa: ", taxa);
     }
 }
