@@ -4,10 +4,12 @@ public class InteiroPositivo {
     private int valor;
 
     public InteiroPositivo(int valor){
+        getMessage(valor);
         this.valor = valor;
     }
 
     public InteiroPositivo(String valor){
+        getMessage(Integer.parseInt(valor));
         this.valor = Integer.parseInt(valor);
     }
 
@@ -16,10 +18,11 @@ public class InteiroPositivo {
     }
 
     public void setValor(int valor){
+        getMessage(valor);
         this.valor = valor;
     }
 
-    public static void getMessage(int valor){
+    public void getMessage(int valor){
         if(valor <= 0){
             throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
