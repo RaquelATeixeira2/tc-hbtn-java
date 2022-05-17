@@ -4,11 +4,21 @@ public class PersonagemGame {
     private String status;
 
     public void tomarDano(int quantidadeDeDano) {
-        saudeAtual = saudeAtual - quantidadeDeDano;
+        if (saudeAtual > 0) {
+            saudeAtual = saudeAtual - quantidadeDeDano;
+            if (saudeAtual < 0) {
+                saudeAtual = 0;
+            }
+        }
     }
 
     public void receberCura(int quantidadeDeCura) {
-        saudeAtual = saudeAtual + quantidadeDeCura;
+        if (saudeAtual <= 100) {
+            saudeAtual = saudeAtual + quantidadeDeCura;
+            if (saudeAtual > 100) {
+                saudeAtual = 100;
+            }
+        }
     }
 
     public String getNome() {
