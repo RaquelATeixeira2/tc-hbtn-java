@@ -1,8 +1,8 @@
 public class PersonagemGame {
     private int saudeAtual;
-    private String nome;
+    private String nome;    
 
-    public String getNome(String nome){
+    public String getNome(){
         return nome;
     }
 
@@ -10,7 +10,7 @@ public class PersonagemGame {
         this.nome = nome;
     }
 
-    public int getSaudeAtual(int saudeAtual){
+    public int getSaudeAtual(){
         return saudeAtual;
     }
 
