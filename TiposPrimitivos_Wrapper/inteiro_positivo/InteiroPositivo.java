@@ -1,7 +1,7 @@
 package TiposPrimitivos_Wrapper.inteiro_positivo;
 
 public class InteiroPositivo {
-    public static int valor;
+    private int valor;
 
     public InteiroPositivo(int valor){
         this.valor = valor;
@@ -26,8 +26,8 @@ public class InteiroPositivo {
     }
 
     public static boolean ehPrimo() {
-        for (int j = 2; j < valor; j++) {
-            if (valor % j == 0)
+        for (int j = 2; j < this.valor; j++) {
+            if (this.valor % j == 0)
                 return false;   
         }
         return true;
