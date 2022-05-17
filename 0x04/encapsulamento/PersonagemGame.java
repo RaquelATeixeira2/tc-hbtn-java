@@ -19,7 +19,7 @@ public class PersonagemGame {
         return saudeAtual;
     }
 
-    public void setNome(int saudeAtual){
+    public void setSaudeAtual(int saudeAtual){
         this.saudeAtual = saudeAtual;
     }
 
