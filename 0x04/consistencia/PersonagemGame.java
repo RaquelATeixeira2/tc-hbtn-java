@@ -2,8 +2,10 @@ public class PersonagemGame {
     private int saudeAtual;
     private String nome;
     private String status;
+    private String nomeInicial;
 
     public PersonagemGame(int saudeAtualInicial, String nomeInicial){
+        this.nomeInicial = nomeInicial;
         setSaudeAtual(saudeAtualInicial);
     }
 
@@ -30,10 +32,11 @@ public class PersonagemGame {
     }
 
     public void setNome(String nome) {
-        if(nome == null || nome.isEmpty()){
-            
-        }
-        this.nome = nome;
+       if(nome == null || nome.isEmpty()){
+           this.nome = nomeInicial;
+       } else {
+           this.nome = nome;
+       }
     }
 
     public int getSaudeAtual() {
@@ -52,5 +55,10 @@ public class PersonagemGame {
     public String getStatus(){
         return status;
     }
+
+    public String getNomeInicial(){
+        return nomeInicial;
+    }
+
 
 }
