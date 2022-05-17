@@ -25,9 +25,9 @@ public class InteiroPositivo {
         }
     }
 
-    public static boolean ehPrimo() {
-        for (int j = 2; j < this.valor; j++) {
-            if (this.valor % j == 0)
+    public static boolean ehPrimo(int valor) {
+        for (int j = 2; j < valor; j++) {
+            if (valor % j == 0)
                 return false;   
         }
         return true;
