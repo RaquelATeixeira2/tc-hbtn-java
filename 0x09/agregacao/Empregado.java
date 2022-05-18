@@ -30,7 +30,7 @@ public class Empregado {
         this.codigo = codigo;
     }
 
-    public void setEndereco(String endereco){
+    public void setEndereco(Endereco endereco){
         this.endereco = endereco;
     }
 
