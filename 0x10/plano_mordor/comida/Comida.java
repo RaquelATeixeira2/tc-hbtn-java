@@ -11,8 +11,4 @@ public abstract class Comida {
         return pontosDeFelicidade;
     }
 
-    public void setPontosDeFelicidade(){
-        this.pontosDeFelicidade = pontosDeFelicidade;
-    }
-
 }

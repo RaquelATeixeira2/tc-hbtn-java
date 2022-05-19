@@ -18,13 +18,13 @@ public class Personagem {
 
     public void comer(Comida[] comidas) {
        for(Comida comida : comidas){
-            this.pontosDeFelicidade += comida.pontosDeFelicidade;
+            this.pontosDeFelicidade += comida.getPontosDeFelicidade();
        }
     }
 
     @Override
     public String toString() {
-        String msg = pontosDeFelicidade + " - " + obterHumorAtual().getClass.getSimpleName;
+        String msg = pontosDeFelicidade + " - " + obterHumorAtual().getClass().getSimpleName();
         
         return msg; 
     }
