@@ -1,3 +1,4 @@
+import produtos.Produto;
 public class Pedido {
     private double percentualDesconto;
     private ItempPedido[] itens;
@@ -19,16 +20,8 @@ public class Pedido {
         return percentualDesconto;
     }
 
-    public void setPercentualDesconto(double percentualDesconto) {
-        this.percentualDesconto = percentualDesconto;
-    }
-
     public ItempPedido[] getItens() {
         return itens;
-    }
-
-    public void setItens(ItempPedido[] itens) {
-        this.itens = itens;
     }
 
     
