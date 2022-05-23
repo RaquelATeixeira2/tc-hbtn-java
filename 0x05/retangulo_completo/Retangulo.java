@@ -25,7 +25,8 @@ public class Retangulo extends FormaGeometrica{
 
     @Override
     public double area(){
-        return altura * altura;
+        double resultado = this.altura * this.largura;
+        return resultado;
     }
 
     public String toString(){
