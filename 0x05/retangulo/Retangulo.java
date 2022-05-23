@@ -22,5 +22,9 @@ public class Retangulo extends FOrmaGeometrica{
         this.altura = altura;
         }
     }
+
+    public double area(){
+        return largura * altura;
+    }
     
 }
