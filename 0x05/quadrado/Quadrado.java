@@ -5,7 +5,7 @@ public class Quadrado extends Retangulo{
         return lado;
     }
 
-    public void setLado(double lado, double altura, double largura) {
+    public void setLado(double lado) {
         if(lado < 0){
             throw new IllegalArgumentException("Lado deve ser maior ou igual a 0");
         } else {
