@@ -1,9 +1,9 @@
 import produtos.Produto;
 public class Pedido {
     private double percentualDesconto;
-    private ItempPedido[] itens;
+    private ItemPedido[] itens;
 
-    public Pedido(double percentualDesconto, ItempPedido[] itens) {
+    public Pedido(double percentualDesconto, ItemPedido[] itens) {
         this.percentualDesconto = percentualDesconto;
         this.itens = itens;
     }
@@ -20,7 +20,7 @@ public class Pedido {
         return percentualDesconto;
     }
 
-    public ItempPedido[] getItens() {
+    public ItemPedido[] getItens() {
         return itens;
     }
 
