@@ -10,15 +10,15 @@ public class Quadrado extends Retangulo{
             throw new IllegalArgumentException("Lado deve ser maior ou igual a 0");
         } else {
         this.lado = lado;
-        this.largura = largura;
-        this.altura = altura;
+        super.largura = lado;
+        super.altura = lado;
         }
     }
 
 
     @Override
     public String toString() {
-        String r = String.format("[Quadrado] %.2f", lado);
+        String r = String.format("[Quadrado] %.2f", getLado());
         return r;
     }
     

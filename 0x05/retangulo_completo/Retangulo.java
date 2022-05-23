@@ -25,12 +25,12 @@ public class Retangulo extends FormaGeometrica{
 
     @Override
     public double area(){
-        double resultado = this.altura * this.largura;
+        double resultado = getAltura() * getLargura();
         return resultado;
     }
 
     public String toString(){
-        String r = String.format("[Retangulo] %.2f / %.2f", largura, altura);
+        String r = String.format("[Retangulo] %.2f / %.2f", getLargura(), getAltura());
         return r;
     }
 }
