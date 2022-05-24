@@ -9,11 +9,11 @@ public class Pedido {
     }
 
     public double calcularTotal(){
-        double somaTotal = 0;
-        for (ItemPedido item : getItens()){
-            somaTotal = somaTotal + item.getProduto().obterPrecoLiquido() * item.getQuantidade();
+        double total = 0;
+        for (ItemPedido item : itens) {
+            total = total + (item.getQuantidade() * item.getProduto().obterPrecoLiquido());
         }
-        return somaTotal * (1 - getPercentualDesconto()/100);
+        return (total - total * this.percentualDesconto/100);
     }
 
     public double getPercentualDesconto() {
