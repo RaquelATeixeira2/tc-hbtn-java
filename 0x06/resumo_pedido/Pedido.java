@@ -26,7 +26,7 @@ public class Pedido {
         }
 
         System.out.println("----------------------------");
-        double desconto = total * (getPercentualDesconto()/100);
+        double desconto = sDesconto * (getPercentualDesconto()/100);
         System.out.printf(java.util.Locale.GERMANY, "DESCONTO: %.2f\n", desconto);
         System.out.printf(java.util.Locale.GERMANY, "TOTAL PRODUTOS: %.2f\n", sDesconto);
         System.out.println("----------------------------");
