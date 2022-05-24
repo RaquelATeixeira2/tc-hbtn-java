@@ -22,7 +22,7 @@ public class Pedido {
         for(ItemPedido item : itens){
             total = item.getQuantidade() * item.getProduto().obterPrecoLiquido();
             sDesconto += total;
-            System.out.printf("Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f%n", item.getProduto().getClass().getSimpleName(), item.getProduto().getTitulo(), item.getProduto().obterPrecoLiquido(), item.getQuantidade(), total);
+            System.out.printf(java.util.Locale.GERMANY,"Tipo: %s Titulo: %s Preco: %.2f Quant: %d Total: %.2f%n", item.getProduto().getClass().getSimpleName(), item.getProduto().getTitulo(), item.getProduto().obterPrecoLiquido(), item.getQuantidade(), total);
         }
 
         System.out.println("----------------------------");
