@@ -1,3 +1,3 @@
 public interface CanalNotificacao {
-    void notificar(Mensagem Mensagem);
+    void notificar(Mensagem mensagem);
 }
