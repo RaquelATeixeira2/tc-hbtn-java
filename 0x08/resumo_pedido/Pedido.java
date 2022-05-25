@@ -1,26 +1,34 @@
+import provedores.Frete;
+
 public class Pedido {
-    private Frete codigo;
-    private Frete peso;
-    private Frete total;
+    private int codigo;
+    private double peso;
+    private double total;
     private Frete frete;
 
-
-    public Frete getCodigo() {
+    
+    public Pedido(int codigo, double peso, double total) {
+        this.codigo = codigo;
+        this.peso = peso;
+        this.total = total;
+    }
+    
+    public int getCodigo() {
         return codigo;
     }
-    public void setCodigo(Frete codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
-    public Frete getPeso() {
+    public double getPeso() {
         return peso;
     }
-    public void setPeso(Frete peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
-    public Frete getTotal() {
+    public double getTotal() {
         return total;
     }
-    public void setTotal(Frete total) {
+    public void setTotal(double total) {
         this.total = total;
     }
     public Frete getFrete() {
@@ -29,4 +37,5 @@ public class Pedido {
     public void setFrete(Frete frete) {
         this.frete = frete;
     }
+    
 }
