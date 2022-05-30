@@ -5,7 +5,7 @@ public class Tarefa {
     private boolean estahFeita;
     private int identificador;
 
-    public Tarefa(String descricao, int identificador) throws Exception {
+    public Tarefa(String descricao, int identificador) {
         if(descricao.isEmpty() || descricao == null){
             throw new IllegalArgumentException("Descricao de tarefa invalida");
         }
@@ -28,9 +28,6 @@ public class Tarefa {
     }
 
     public void modificarDescricao(String novaDesc) throws Exception{
-        if(novaDesc.isEmpty() || novaDesc == null){
-            throw new IllegalArgumentException("Descricao de tarefa invalida");
-        }
         this.descricao = novaDesc;
     }
 }
