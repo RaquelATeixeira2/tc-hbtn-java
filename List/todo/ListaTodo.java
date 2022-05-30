@@ -51,9 +51,9 @@ public class ListaTodo {
     public void listarTarefas(){
         for(Tarefa tarefa : tarefas){
            if(tarefa.isEstahFeita()){
-                System.out.println("[X] id: " + tarefa.getIdentificador() + " - Descrição: " + tarefa.getDescricao());
+                System.out.println("[X] id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
            } else{
-            System.out.println("[ ] id: " + tarefa.getIdentificador() + " - Descrição: " + tarefa.getDescricao());
+            System.out.println("[ ] id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
            }
         }
     }
