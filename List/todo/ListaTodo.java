@@ -4,7 +4,7 @@ public class ListaTodo {
     private ArrayList<Tarefa> tarefas;
 
     public ListaTodo() {
-        this.tarefas = tarefas;
+        tarefas = new ArrayList<Tarefa>();
     }
 
     public void adicionarTarefa(Tarefa t) throws Exception{
