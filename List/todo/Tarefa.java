@@ -25,7 +25,7 @@ public class Tarefa {
     }
 
     public void modificarDescricao(String novaDesc) throws Exception{
-        if(novaDesc.isEmpty() || novaDesc == null){
+        if(novaDesc.isEmpty() || novaDesc.equals("")){
             throw new IllegalArgumentException("Descricao de tarefa invalida");
         }
         this.descricao = novaDesc;
