@@ -40,7 +40,7 @@ public class Celular {
 
     public void listarContatos(){
         for(Contato contato : contatos){
-            System.out.printf("%s -> %s (%s)", contato.getNome(), contato.getNumero(), contato.getTipoNumero());
+            System.out.printf("%s -> %s (%s)%n", contato.getNome(), contato.getNumero(), contato.getTipoNumero());
         }
     }
 }
