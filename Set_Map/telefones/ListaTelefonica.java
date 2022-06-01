@@ -4,8 +4,6 @@ import java.util.HashMap;
 public class ListaTelefonica {
     private HashMap<String, ArrayList<Telefone>> contatos;
 
-    
-
     public ListaTelefonica() {
         contatos = new HashMap<>();
     }
