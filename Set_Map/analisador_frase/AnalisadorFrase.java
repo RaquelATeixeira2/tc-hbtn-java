@@ -1,18 +1,18 @@
 import java.util.TreeMap;
 public class AnalisadorFrase {
-    public static TreeMap<String, Integer> contagemDePalavras(String frase){
+    public static TreeMap<String, Integer> contagemPalavras(String frase) {
         TreeMap<String, Integer> mapP = new TreeMap<String, Integer>();
 
-        String tratada = frase.replace("[?!.]", "");
-        String [] pTratada = tratada.split("");
+        String fraseT = frase.replaceAll("[?!.]", "");
+        String[] p = fraseT.split(" ");
 
-        for(String palavraTratada : pTratada){
-            if (mapPalavras.containsKey(palavra.toLowerCase())) {
-                mapPalavras.put(palavra.toLowerCase(), mapPalavras.get(palavra.toLowerCase()) + 1);
+        for (String palavra : p) {
+            if (mapP.containsKey(palavra.toLowerCase())) {
+                mapP.put(palavra.toLowerCase(), mapP.get(palavra.toLowerCase()) + 1);
             } else {
-                mapPalavras.put(palavra.toLowerCase(), 1);
+                mapP.put(palavra.toLowerCase(), 1);
             }
         }
-        return mapP;  
+        return mapP;
     }
 }
