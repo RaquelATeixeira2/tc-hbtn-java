@@ -1,8 +1,9 @@
 import java.util.HashSet;
+import java.util.TreeSet;
 
 public class NumerosDuplicados {
     public static TreeSet<Integer> buscar(int[] numeros){
-        TreeMap<Integer> tset = new TreeMap<Integer>();
+        TreeSet<Integer> tset = new TreeSet<Integer>();
         HashSet<Integer> hset = new HashSet<Integer>();
 
         for(int n : numeros){
