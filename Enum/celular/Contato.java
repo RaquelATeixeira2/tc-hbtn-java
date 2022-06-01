@@ -24,8 +24,5 @@ public class Contato {
     public TipoNumero getTipoNumero() {
         return tipoNumero;
     }
-    public void setTipoNumero(TipoNumero tipoNumero) {
-        this.tipoNumero = tipoNumero;
-    }
     
 }
