@@ -42,5 +42,6 @@ public class ListaTelefonica {
 
     public HashSet<Telefone> buscar(String nome) {
         return contatos.get(nome);
-    } 
+    }
+    
 }
