@@ -1,5 +1,5 @@
 public class Empregado {
-    private double salarioFixo;
+    public double salarioFixo;
 
     public Empregado(double salarioFixo) {
         this.salarioFixo = salarioFixo;
