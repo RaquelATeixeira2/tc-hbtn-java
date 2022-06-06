@@ -11,6 +11,7 @@ public class Gerente extends Empregado{
             double diferencaMeta = departamento.getValorAtingidoMeta() - departamento.getValorMeta();
             bonus = 0.2 * this.salarioFixo + 0.01 * diferencaMeta;
         }
+        numeroFormatado.format(bonus);
         return bonus;
     }
 }
