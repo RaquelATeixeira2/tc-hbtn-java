@@ -31,7 +31,7 @@ public class Blog {
     }
 
     public Map<Categorias, Integer> obterContagemPorCategoria() {
-        Map<Categorias,Integer> mapaContagem = new HashMap<Categorias,Integer>();
+        Map<Categorias,Integer> mapaContagem = new TreeMap<>();
 
         for (Post post : listaPostagem) {
             if (mapaContagem.containsKey(post.getCategoria())) {
@@ -55,13 +55,15 @@ public class Blog {
     }
 
     public Set<Post> obterPostsPorAutor(Autor autor) {
-        Set<Post> postsAutor = new TreeSet<>();
-        for(Post p : listaPostagem){
-            if(p.getAutor().equals(autor)){
-                postsAutor.add(p);
+        Set<Post> posts = new TreeSet<>();
+
+        for (Post post : listaPostagem) {
+            if (post.getAutor().getNome().equals(autor.getNome()) && post.getAutor().getSobrenome().equals(autor.getSobrenome())) {
+                posts.add(post);
             }
         }
-        return postsAutor;
+
+        return posts;
     }
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
