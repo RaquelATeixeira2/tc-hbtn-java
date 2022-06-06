@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 public class Blog {
 
-    List<Post> listaPostagem = new ArrayList<>();
+    private List<Post> listaPostagem = new ArrayList<>();
 
     public void adicionarPostagem(Post post) {
         this.listaPostagem.add(post);
