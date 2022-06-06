@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -6,7 +7,7 @@ import java.util.TreeSet;
 
 public class Blog {
 
-    ArrayList<Post> listaPostagem = new ArrayList<>();
+    List<Post> listaPostagem = new ArrayList<>();
 
     public void adicionarPostagem(Post post) {
         this.listaPostagem.add(post);
