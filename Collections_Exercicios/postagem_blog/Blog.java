@@ -10,10 +10,13 @@ public class Blog {
 
     private List<Post> listaPostagem = new ArrayList<>();
 
-    public void adicionarPostagem(Post post) {
-        if(listaPostagem.contains(post)){
-            throw new IllegalArgumentException("Postagem jah existente");
+    public void adicionarPostagem(Post post) throws Exception {
+        for (Post posts : listaPostagem) {
+            if (posts.getAutor().equals(post.getAutor()) && posts.getTitulo().equals(post.getTitulo())) {
+                throw new Exception("Postagem jah existente");
+            }
         }
+
         this.listaPostagem.add(post);
     }
 

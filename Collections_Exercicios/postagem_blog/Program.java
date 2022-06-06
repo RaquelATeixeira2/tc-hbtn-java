@@ -1,6 +1,6 @@
 import java.util.*;
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Blog blog1 = new Blog();
 
         Autor autor1 = new Autor("John", "Bannons");
