@@ -1,20 +1,23 @@
+import exceptions.AutorInvalidoException;
+import exceptions.LivroInvalidoException;
+
 public class Livro {
     private String titulo;
     private String autor;
-    private double preco;
+    protected double preco;
 
-    public Livro(String titulo, String autor, double preco) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.valor = preco;
+    public Livro(String titulo, String autor, double preco) throws LivroInvalidoException, AutorInvalidoException {
+        setTitulo(titulo); 
+        setAutor(autor);
+        setPreco(preco);
     }
 
     public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        if(3 <= titulo.length()){
+    public void setTitulo(String titulo) throws LivroInvalidoException {
+        if(titulo.length() < 3){
             throw new LivroInvalidoException("Titulo de livro invalido");
         }
         this.titulo = titulo;
@@ -24,7 +27,7 @@ public class Livro {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(String autor) throws AutorInvalidoException {
         if (!autor.contains(" ")) {
             throw new AutorInvalidoException("Nome de autor invalido");
         }
@@ -35,8 +38,8 @@ public class Livro {
         return preco;
     }
 
-    public void setPreco(double preco) {
-        if(0 < preco){
+    public void setPreco(double preco) throws LivroInvalidoException {
+        if(preco <= 0){
             throw new LivroInvalidoException("Preco de livro invalido");
         }
         this.preco = preco;
