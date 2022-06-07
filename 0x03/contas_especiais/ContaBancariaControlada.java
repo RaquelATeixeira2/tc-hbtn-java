@@ -8,14 +8,12 @@ public class ContaBancariaControlada extends ContaBancariaBasica{
         this.valorPenalidade = valorPenalidade;
     }
 
-    public double getSaldoMinimo() {
-        return saldoMinimo;
-    }
-
     @Override
     public void aplicarAtualizacaoMensal(){
-        if(getSaldo() < saldoMinimo || getSaldo() <= 0){
-            setSaldo(getSaldo() - calcularTarifaMensal() - getSaldoMinimo() + calcularJurosMensal());
+        if (getSaldo() <= this.saldoMinimo || getSaldo() == 0){
+            setSaldo(getSaldo() - calcularTarifaMensal() + calcularJurosMensal() - this.valorPenalidade);
+        } else {
+            super.aplicarAtualizacaoMensal();
         }
     }
     
