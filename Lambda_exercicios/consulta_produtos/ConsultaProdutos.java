@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 public class ConsultaProdutos {
     public static List<Produto> filtrar(List<Produto> listProduto, CriterioFiltro criterio) {
         List<Produto> returnList = new ArrayList<>();
