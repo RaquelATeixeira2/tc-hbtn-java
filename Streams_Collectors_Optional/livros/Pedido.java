@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido {
@@ -8,7 +7,7 @@ public class Pedido {
 
     public Pedido(int codigo, List<Produto> produtos, Cliente cliente) {
         this.codigo = codigo;
-        this.produtos = new ArrayList<>();
+        this.produtos = produtos;
         this.cliente = cliente;
     }
 

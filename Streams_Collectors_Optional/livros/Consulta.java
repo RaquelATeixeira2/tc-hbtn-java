@@ -5,9 +5,9 @@ import java.util.stream.Collectors;
 public class Consulta {
     public static List<Produto> obterLivrosDoPedido(Pedido pedido){
         List<Produto> produtos = pedido.getProdutos();
-        
+
         return produtos.stream()
-        .filter(p -> p.getCategoria().equals(CategoriaProduto.LIVRO))
-        .collect(Collectors.toList());
+            .filter(p -> p.getCategoria().equals(CategoriaProduto.LIVRO))
+            .collect(Collectors.toList());
     }
 }

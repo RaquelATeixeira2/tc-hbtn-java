@@ -31,9 +31,8 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format(Locale.GERMANY,"%d %s %s %.2f", this.codigo, this.nome, this.categoria, this.preco);
+        return "[" + this.codigo + "] " + this.nome + " " + this.categoria + " R$ " + String.format("%.2f", this.preco);
     }
-
     
 
 }
