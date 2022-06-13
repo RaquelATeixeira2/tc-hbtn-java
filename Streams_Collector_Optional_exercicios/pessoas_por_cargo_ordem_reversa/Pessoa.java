@@ -29,48 +29,22 @@ public class Pessoa implements Comparable<Pessoa>{
     }
     @Override
     public String toString() {
-        return "[" + this.codigo + "] " + " " + this.nome + " " + this.cargo + " R$ " + String.format("%.6f", this.salario);
+        return "[" + this.codigo + "] " + this.nome + " " + this.cargo + " " + this.idade + " R$ " + String.format("%.6f", this.salario);
     }
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Pessoa pessoa = (Pessoa) o;
+
+        return codigo == pessoa.codigo;
+    }
+
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((cargo == null) ? 0 : cargo.hashCode());
-        result = prime * result + codigo;
-        result = prime * result + idade;
-        result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        long temp;
-        temp = Double.doubleToLongBits(salario);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Pessoa other = (Pessoa) obj;
-        if (cargo == null) {
-            if (other.cargo != null)
-                return false;
-        } else if (!cargo.equals(other.cargo))
-            return false;
-        if (codigo != other.codigo)
-            return false;
-        if (idade != other.idade)
-            return false;
-        if (nome == null) {
-            if (other.nome != null)
-                return false;
-        } else if (!nome.equals(other.nome))
-            return false;
-        if (Double.doubleToLongBits(salario) != Double.doubleToLongBits(other.salario))
-            return false;
-        return true;
+        return codigo;
     }
 
     @Override
