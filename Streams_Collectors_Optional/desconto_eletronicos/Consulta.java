@@ -34,7 +34,7 @@ public class Consulta {
         return produtosPedido.stream()
                 .map(p -> {
                     if (p.getCategoria().equals(CategoriaProduto.ELETRONICO)) {
-                        p.setPreco(p.getPreco() * 0.15);
+                        p.setPreco(p.getPreco() * 0.85);
                     }
                     return p;
                 })
