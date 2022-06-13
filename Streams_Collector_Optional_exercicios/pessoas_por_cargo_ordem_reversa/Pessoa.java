@@ -3,9 +3,9 @@ public class Pessoa implements Comparable<Pessoa>{
     private String nome;
     private String cargo;
     private int idade;
-    private int salario;
+    private double salario;
 
-    public Pessoa(int codigo, String nome, String cargo, int idade, int salario) {
+    public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
         this.codigo = codigo;
         this.nome = nome;
         this.cargo = cargo;
@@ -24,13 +24,14 @@ public class Pessoa implements Comparable<Pessoa>{
     public int getIdade() {
         return idade;
     }
-    public int getSalario() {
+    public double getSalario() {
         return salario;
     }
     @Override
     public String toString() {
         return "[" + this.codigo + "] " + " " + this.nome + " " + this.cargo + " R$ " + String.format("%.6f", this.salario);
     }
+    
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -39,7 +40,9 @@ public class Pessoa implements Comparable<Pessoa>{
         result = prime * result + codigo;
         result = prime * result + idade;
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        result = prime * result + salario;
+        long temp;
+        temp = Double.doubleToLongBits(salario);
+        result = prime * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
     @Override
@@ -65,7 +68,7 @@ public class Pessoa implements Comparable<Pessoa>{
                 return false;
         } else if (!nome.equals(other.nome))
             return false;
-        if (salario != other.salario)
+        if (Double.doubleToLongBits(salario) != Double.doubleToLongBits(other.salario))
             return false;
         return true;
     }
