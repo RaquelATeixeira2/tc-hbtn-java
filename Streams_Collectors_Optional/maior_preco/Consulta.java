@@ -1,4 +1,6 @@
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -12,7 +14,7 @@ public class Consulta {
     }
 
     public static Produto obterProdutoMaiorPreco(List<Produto> produtos){
-        Optional<Produto> produtosMaiorPreco = produtosPedido.stream().max(Comparator.comparingDouble(Produto::getPreco));
-        return max.orElse(null);
+        Optional<Produto> produtosMaiorPreco = produtos.stream().max(Comparator.comparingDouble(Produto::getPreco));
+        return produtosMaiorPreco.orElse(null);
     }
 }
