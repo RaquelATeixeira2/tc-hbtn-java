@@ -29,7 +29,7 @@ public class Pessoa implements Comparable<Pessoa>{
     }
     @Override
     public String toString() {
-        return "[" + this.codigo + "] " + " " + this.nome + " " + this.cargo + " R$" + this.salario;
+        return "[" + this.codigo + "] " + " " + this.nome + " " + this.cargo + " R$ " + String.format("%.6f", this.salario);
     }
     @Override
     public int hashCode() {
