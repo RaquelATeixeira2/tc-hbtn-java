@@ -1,11 +1,11 @@
-import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.List;
 
-public class SerializarEstudantes {
+public class SerializarEstudantes<Estudante>{
     private String nomeArquivo;
 
     public SerializarEstudantes(String nomeArquivo) {
