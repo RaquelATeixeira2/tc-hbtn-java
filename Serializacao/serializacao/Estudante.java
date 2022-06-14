@@ -19,4 +19,9 @@ public class Estudante implements Serializable{
     public String getSenha() {
         return senha;
     }   
+
+    @Override
+    public String toString() {
+        return "Estudante { " + "nome='" + this.nome + "', idade='" + this.idade + "', senha='" + this.senha + "' }";
+    }
 }
