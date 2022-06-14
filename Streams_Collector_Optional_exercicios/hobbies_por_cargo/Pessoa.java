@@ -1,3 +1,6 @@
+import java.util.Collection;
+import java.util.List;
+
 public class Pessoa implements Comparable<Pessoa>{
     private int codigo;
     private String nome;
@@ -52,5 +55,8 @@ public class Pessoa implements Comparable<Pessoa>{
     @Override
     public int compareTo(Pessoa pessoa) {
         return this.nome.compareTo(pessoa.getNome());
+    }
+    public List<String> getHobbies() {
+        return hobbies;
     }
 }
